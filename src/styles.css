@@ -1,37 +1,177 @@
+/* ─── Reset & base ─────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 2rem auto;
-    max-width: 920px;
-    line-height: 1.5;
-    color: #222;
-    background-color: #97c9f8;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #eef2f7;
+  color: #1a1a2e;
+  line-height: 1.6;
+  min-height: 100vh;
+  padding: 2.5rem 1rem;
 }
 
-h1 {
-    margin-bottom: 0;
+/* ─── Page wrapper ─────────────────────────────────────── */
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.10);
+  overflow: hidden;
 }
 
+/* ─── Header ───────────────────────────────────────────── */
+header.section.header {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 60%, #0f3460 100%);
+  color: #fff;
+  padding: 2.5rem 2.5rem 2rem;
+  position: relative;
+}
+
+header.section.header::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #e94560, #0f3460, #533483);
+}
+
+header.section.header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.25rem;
+}
+
+header.section.header p:nth-child(2) {
+  font-size: 1.05rem;
+  color: #a8b2d8;
+  margin-bottom: 0.75rem;
+}
+
+header.section.header p:nth-child(3) {
+  font-size: 0.875rem;
+  color: #7b8ab8;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+}
+
+/* ─── Content padding ──────────────────────────────────── */
+section.section {
+  padding: 1.5rem 2.5rem;
+  border-bottom: 1px solid #f0f0f5;
+}
+
+section.section:last-child {
+  border-bottom: none;
+}
+
+/* ─── Section headings ─────────────────────────────────── */
 h2 {
-    margin-top: 1.5rem;
-    margin-bottom: 0.5rem;
-    font-size: 1.25rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #0f3460;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e94560;
+  display: inline-block;
 }
 
-.highlight {
-    color: #c0392b; /* червоний акцент — нещодавні проєкти */
+/* ─── Summary ──────────────────────────────────────────── */
+.summary p {
+  color: #444;
+  font-size: 0.95rem;
+  line-height: 1.75;
 }
 
-.section {
-    margin-top: 1rem;
+/* ─── Experience ───────────────────────────────────────── */
+.experience-item {
+  margin-bottom: 1.25rem;
+  padding: 1rem 1.25rem;
+  background: #f8f9fc;
+  border-left: 3px solid #0f3460;
+  border-radius: 0 8px 8px 0;
 }
 
-.experience-item,
-.education-item,
+.experience-item strong {
+  display: block;
+  font-size: 1rem;
+  color: #1a1a2e;
+  margin-bottom: 0.15rem;
+}
+
+.experience-item em {
+  font-size: 0.8rem;
+  color: #888;
+  font-style: normal;
+}
+
+/* ─── Projects (Composite leaf nodes) ─────────────────── */
 .project-item {
-    margin-bottom: 0.75rem;
+  margin-top: 0.6rem;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  color: #333;
+  background: #fff;
+  border-radius: 6px;
+  border: 1px solid #e8e8f0;
+}
+
+/* ─── Decorator: highlight recent projects ─────────────── */
+.highlight {
+  color: #c0392b;
+  border-color: #f5c6c6;
+  background: #fff8f8;
+  font-weight: 600;
+}
+
+/* ─── Education ────────────────────────────────────────── */
+.education-item {
+  font-size: 0.9rem;
+  color: #333;
+  padding: 0.6rem 0;
+}
+
+.education-item strong {
+  color: #1a1a2e;
+  font-size: 0.95rem;
+}
+
+/* ─── Skills ───────────────────────────────────────────── */
+.skills {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 ul.skills-list {
-    list-style: square inside;
-    padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 0.5rem;
+}
+
+ul.skills-list li {
+  background: #eef2f7;
+  color: #0f3460;
+  border: 1px solid #d0d8ea;
+  padding: 0.2rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.skills p {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #888;
+  margin-bottom: 0.3rem;
 }
