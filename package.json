@@ -1,0 +1,18 @@
+{
+  "name": "resume-generator-template",
+  "version": "1.0.0",
+  "description": "Генератор резюме з JSON-опису. Демонструє застосування п'яти патернів: Facade, Template Method, Factory Method, Composite, Decorator.",
+  "main": "main.js",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "dev": "vite",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "vite": "^5.2.10"
+  }
+}
