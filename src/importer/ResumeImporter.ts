@@ -27,7 +27,11 @@ export class ResumeImporter extends AbstractImporter<ResumeModel> {
   }
 
   protected render(model: ResumeModel): void {
-    const root = document.getElementById("resume-content")!;
+    const root = document.getElementById("resume-content");
+    if (!root) throw new Error("Елемент #resume-content не знайдено");
+
+    root.innerHTML = "";
+
     const factory = new BlockFactory();
 
     const types: BlockType[] = ["header", "summary", "experience", "education", "skills"];
